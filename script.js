@@ -64,31 +64,29 @@ function toFraction(number) {
 
     let fraction = "";
 
-    if (decimal == 0) {
-        return whole;
+    if (decimal < 0.125) {
+        fraction = "";
     }
-
-    if (decimal == 0.25) {
+    else if (decimal < 0.375) {
         fraction = "¼";
-    } 
-    else if (decimal == 0.5) {
+    }
+    else if (decimal < 0.625) {
         fraction = "½";
-    } 
-    else if (decimal == 0.75) {
+    }
+    else if (decimal < 0.875) {
         fraction = "¾";
-    } 
-    else if (decimal == 0.33) {
-        fraction = "⅓";
-    } 
-    else if (decimal == 0.67) {
-        fraction = "⅔";
-    } 
+    }
     else {
-        return number.toFixed(2);
+        whole = whole + 1;
+        fraction = "";
     }
 
-    if (whole == 0) {
+    if (whole == 0 && fraction != "") {
         return fraction;
+    }
+
+    if (fraction == "") {
+        return whole;
     }
 
     return whole + " " + fraction;
@@ -121,9 +119,9 @@ function scaleRecipe() {
 
         let unit = ingredient.querySelector(".unit").value;
 
-      let newQuantity = quantity * scalingFactor;
+let newQuantity = quantity * scalingFactor;
 
-      newQuantity = toFraction(newQuantity);
+newQuantity = toFraction(newQuantity);
 
         let emoji = getEmoji(name);
 
