@@ -4,21 +4,21 @@ function addIngredient() {
 
     ingredient.className = "ingredient";
 
-   ingredient.innerHTML = `
-    <input type="text" placeholder="Ingredient" class="name">
-    <input type="number" placeholder="Quantity" class="quantity">
+    ingredient.innerHTML = `
+        <input type="text" placeholder="Ingredient" class="name">
+        <input type="number" placeholder="Quantity" class="quantity">
 
-    <select class="unit">
-        <option value="tsp">tsp</option>
-        <option value="tbsp">tbsp</option>
-        <option value="cup">cup</option>
-        <option value="oz">oz</option>
-        <option value="lb">lb</option>
-        <option value="g">g</option>
-        <option value="kg">kg</option>
-        <option value="each">each</option>
-    </select>
-`;
+        <select class="unit">
+            <option value="tsp">tsp</option>
+            <option value="tbsp">tbsp</option>
+            <option value="cup">cup</option>
+            <option value="oz">oz</option>
+            <option value="lb">lb</option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="each">each</option>
+        </select>
+    `;
 
     document.getElementById("ingredients").appendChild(ingredient);
 }
