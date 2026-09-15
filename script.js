@@ -121,7 +121,9 @@ function scaleRecipe() {
 
         let unit = ingredient.querySelector(".unit").value;
 
-        let newQuantity = quantity * scalingFactor;
+      let newQuantity = quantity * scalingFactor;
+
+      newQuantity = toFraction(newQuantity);
 
         let emoji = getEmoji(name);
 
