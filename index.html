@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bake-It-Till-You-Make-It</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🍪 Bake-It-Till-You-Make-It</h1>
+        <p>Don't wanna do the math? I gotchu! One step closer to baking. 🧁</p>
+    </div>
+
+    <div class="container">
+
+        <img src="baking.jpg" class="baking-picture">
+
+        <h2>🥣 Scale Your Recipe</h2>
+
+        <label>Original Servings:</label>
+        <input type="number" id="originalServings" placeholder="Example: 12">
+
+        <label>New Servings:</label>
+        <input type="number" id="newServings" placeholder="Example: 24">
+
+        <h2>🍰 Ingredients</h2>
+
+        <div id="ingredients">
+
+            <div class="ingredient">
+                <input type="text" placeholder="Ingredient" class="name">
+                <input type="number" placeholder="Quantity" class="quantity">
+                <input type="text" placeholder="Unit" class="unit">
+            </div>
+
+        </div>
+
+        <button onclick="addIngredient()">➕ Add Ingredient</button>
+
+        <button onclick="scaleRecipe()">✨ Scale Recipe</button>
+
+        <h2>🎉 Your Updated Recipe</h2>
+
+        <div id="results">
+            <p>Your ingredients will appear here!</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
