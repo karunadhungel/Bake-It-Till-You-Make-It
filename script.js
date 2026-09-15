@@ -57,7 +57,42 @@ function getEmoji(name) {
     return "🥣";
 }
 
+function toFraction(number) {
 
+    let whole = Math.floor(number);
+    let decimal = number - whole;
+
+    let fraction = "";
+
+    if (decimal == 0) {
+        return whole;
+    }
+
+    if (decimal == 0.25) {
+        fraction = "¼";
+    } 
+    else if (decimal == 0.5) {
+        fraction = "½";
+    } 
+    else if (decimal == 0.75) {
+        fraction = "¾";
+    } 
+    else if (decimal == 0.33) {
+        fraction = "⅓";
+    } 
+    else if (decimal == 0.67) {
+        fraction = "⅔";
+    } 
+    else {
+        return number.toFixed(2);
+    }
+
+    if (whole == 0) {
+        return fraction;
+    }
+
+    return whole + " " + fraction;
+}
 function scaleRecipe() {
 
     let originalServings = Number(
